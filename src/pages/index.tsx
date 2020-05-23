@@ -36,7 +36,7 @@ export default () => (
         this environmentally friendly heating system.
       </HorizontalCTA>
       <ContactUs />
-      <Footer />
     </Stack>
+    <Footer />
   </>
 );
