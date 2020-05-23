@@ -8,6 +8,8 @@ export default ({ position, image, heading, children, ...props }) => (
       src={image}
       alt={`${heading} photo`}
       size="100%"
+      borderY="10px solid"
+      borderColor="dark"
     />
     <Box px={8} py={6}>
       <Heading as="h2" size="xl" fontWeight={700} letterSpacing="tighter">
