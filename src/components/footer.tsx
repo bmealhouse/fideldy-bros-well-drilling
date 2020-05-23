@@ -13,10 +13,12 @@ export default (props) => (
         </Text>
         <List mt={4}>
           <ListItem>
-            <Link href="tel:+12189990106">218-999-0106</Link>
+            <Link href="tel:+12189990106" color="blue.300">
+              218-999-0106
+            </Link>
           </ListItem>
           <ListItem>
-            <Link href="mailto:troy@fideldywelldrilling.com">
+            <Link href="mailto:troy@fideldywelldrilling.com" color="blue.300">
               troy@fideldywelldrilling.com
             </Link>
           </ListItem>
@@ -26,10 +28,14 @@ export default (props) => (
         <Text as="strong">Emergency</Text>
         <List mt={1}>
           <ListItem>
-            <Link href="tel:+12182446292">218-244-6292</Link>
+            <Link href="tel:+12182446292" color="blue.300">
+              218-244-6292
+            </Link>
           </ListItem>
           <ListItem>
-            <Link href="tel:+12183601569">218-360-1569</Link>
+            <Link href="tel:+12183601569" color="blue.300">
+              218-360-1569
+            </Link>
           </ListItem>
         </List>
       </Box>

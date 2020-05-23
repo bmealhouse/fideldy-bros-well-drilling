@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Flex, Heading, Image, Divider, Text } from "@chakra-ui/core";
+import { Box, Button, Flex, Heading, Image, Link, Text } from "@chakra-ui/core";
 
 export default ({ position, image, heading, children, ...props }) => (
   <Flex {...props} direction={{ base: "column", sm: "row" }}>
@@ -15,10 +15,19 @@ export default ({ position, image, heading, children, ...props }) => (
       <Heading as="h2" size="xl" fontWeight={700} letterSpacing="tighter">
         {heading}
       </Heading>
-      <Text my={2} letterSpacing="tight">
+      <Text mt={2} mb={4} letterSpacing="tight">
         {children}
       </Text>
-      {/* <Divider my={6} /> */}
+      <Button
+        as="a"
+        // @ts-ignore "href" is not recognized as a valid prop when using the <Button as="a" /> component
+        href="#contact-us"
+        variantColor="blue"
+        variant="outline"
+        rightIcon="chevron-right"
+      >
+        Contact us about {heading.toLowerCase()}
+      </Button>
     </Box>
   </Flex>
 );
