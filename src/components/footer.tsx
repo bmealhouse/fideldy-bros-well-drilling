@@ -1,17 +1,25 @@
 import * as React from "react";
-import { Box, List, Link, ListItem, Stack, Text } from "@chakra-ui/core";
+import { Box, Flex, List, Link, ListItem, Stack, Text } from "@chakra-ui/core";
 
-export default (props) => (
-  <Box {...props} as="footer" px={8} py={12} bg="dark" color="white">
-    <Stack spacing={8}>
-      <Box>
-        <Text as="strong">Fideldy Bros Well Drilling</Text>
-        <Text as="address">
-          31822 East Bass Lake Road
-          <br />
-          Grand Rapids, MN 55744
-        </Text>
-        <List mt={4}>
+export default () => (
+  <Box as="footer" bg="dark" color="white">
+    <Box mx="auto" px={8} py={20} maxWidth="containers.lg">
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        justifyContent={{ base: "initial", md: "space-between" }}
+        alignItems={{ base: "initial", md: "center" }}
+        mb={{ base: 4, md: 8 }}
+      >
+        <Box mb={{ base: 4, md: 0 }}>
+          <Text as="strong">Fideldy Bros Well Drilling</Text>
+          <Text as="address">
+            31822 East Bass Lake Road
+            <br />
+            Grand Rapids, MN 55744
+          </Text>
+        </Box>
+        <List mb={{ base: 4, md: 0 }}>
+          <Text as="strong">Contact</Text>
           <ListItem>
             <Link href="tel:+12189990106" color="blue.300">
               218-999-0106
@@ -23,23 +31,23 @@ export default (props) => (
             </Link>
           </ListItem>
         </List>
-      </Box>
-      <Box>
-        <Text as="strong">Emergency</Text>
-        <List mt={1}>
-          <ListItem>
-            <Link href="tel:+12182446292" color="blue.300">
-              218-244-6292
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="tel:+12183601569" color="blue.300">
-              218-360-1569
-            </Link>
-          </ListItem>
-        </List>
-      </Box>
+        <Box>
+          <Text as="strong">Emergency</Text>
+          <List mt={1}>
+            <ListItem>
+              <Link href="tel:+12182446292" color="blue.300">
+                218-244-6292
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="tel:+12183601569" color="blue.300">
+                218-360-1569
+              </Link>
+            </ListItem>
+          </List>
+        </Box>
+      </Flex>
       <Text as="small">Copyright © Fideldy Bros Well Drilling</Text>
-    </Stack>
+    </Box>
   </Box>
 );

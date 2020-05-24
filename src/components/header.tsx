@@ -1,16 +1,11 @@
 import * as React from "react";
-import { Box, Heading, Image } from "@chakra-ui/core";
+import { Box, Button, IconButton, Image, Flex } from "@chakra-ui/core";
 import logo from "../assets/logo.png";
 
-export default (props) => (
-  <Box as="header" {...props}>
-    <Box bg="dark" pl={4} pr={6} py={8}>
-      <Image src={logo} alt="Fideldy Bros Well Drilling" size="100%" />
-    </Box>
-    <Box as="hgroup" px={8} py={16}>
-      <Heading as="h1" size="2xl" fontWeight={740} letterSpacing="tighter">
-        Professional well drilling since 1958
-      </Heading>
+export default () => (
+  <Box as="header" bg="dark">
+    <Box mx="auto" pl={5} pr={6} py={8} maxWidth="containers.lg">
+      <Image src={logo} alt="Fideldy Bros Well Drilling" maxH={119} />
     </Box>
   </Box>
 );
