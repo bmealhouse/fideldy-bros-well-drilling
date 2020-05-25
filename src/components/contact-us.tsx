@@ -55,7 +55,7 @@ export default (props) => (
             <FormErrorMessage>Please enter your email.</FormErrorMessage>
           </FormControl>
         </Stack>
-        <FormControl flex={1} mt={3} ml={{ base: 0, md: 4 }}>
+        <FormControl flex={1} mt={{ base: 4, md: 1 }} ml={{ base: 0, md: 4 }}>
           <Textarea
             placeholder="Message"
             size="lg"
