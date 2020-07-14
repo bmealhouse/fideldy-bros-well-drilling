@@ -8,8 +8,9 @@ import {
   Slogan,
 } from "../components";
 import well_drilling from "../assets/well-drilling.jpg";
-import well_services_repair from "../assets/well-services-repair.jpg";
+// import well_services_repair from "../assets/well-services-repair.jpg";
 import geothermal from "../assets/geothermal.jpg";
+import fideldy_bros from "../assets/fideldy-bros.jpg";
 import "typeface-inter";
 
 export default () => (
@@ -26,7 +27,7 @@ export default () => (
       />
       <HorizontalCTA
         position="right"
-        image={well_services_repair}
+        image={fideldy_bros}
         heading="Well services"
         description="Permanently sealing an abandoned well protects groundwater quality and public health for future generations. We have the skills and equipment to seal abandoned wells. We also repair, sell, and service pumps! We are licensed to do well inspections and water testing."
         buttonText="Contact us about well services"

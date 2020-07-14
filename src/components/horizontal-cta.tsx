@@ -26,17 +26,20 @@ export default ({
         bg="white"
         shadow={{ base: "none", sm: "xl" }}
       >
-        <Image
-          src={image}
-          alt={`${heading} photo`}
+        <Box
           flex="0 0 50%"
           order={{ md: position === "left" ? 0 : 1 }}
-          width="100%"
-          maxHeight={{ sm: 300, md: "initial" }}
-          objectFit="cover"
           borderColor="#333"
           borderTopWidth={{ base: 7, sm: 0 }}
-        />
+        >
+          <Image
+            src={image}
+            alt={`${heading} photo`}
+            size={{ base: 325, md: 400 }}
+            minWidth="100%"
+            objectFit="cover"
+          />
+        </Box>
         <Box flex="0 0 50%" px={8} py={6} borderColor="#333" borderTopWidth={7}>
           <Heading as="h2" size="xl" fontWeight={700} letterSpacing="tighter">
             {heading}
