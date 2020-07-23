@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Flex, List, Link, ListItem, Stack, Text } from "@chakra-ui/core";
+import { Box, Flex, List, Link, ListItem, Text } from "@chakra-ui/core";
 
 export default () => (
   <Box as="footer" bg="dark" color="white">

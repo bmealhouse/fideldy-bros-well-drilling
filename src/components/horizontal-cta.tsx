@@ -1,14 +1,5 @@
 import * as React from "react";
-import {
-  AspectRatioBox,
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/core";
+import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/core";
 
 export default ({
   position,

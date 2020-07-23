@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Button, IconButton, Image, Flex } from "@chakra-ui/core";
+import { Box, Image } from "@chakra-ui/core";
 import logo from "../assets/logo.png";
 
 export default () => (

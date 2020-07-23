@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Heading, Button } from "@chakra-ui/core";
+import { Box, Heading } from "@chakra-ui/core";
 
 export default () => (
   <Box bg="blackAlpha.50">
