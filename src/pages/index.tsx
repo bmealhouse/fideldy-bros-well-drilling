@@ -10,7 +10,7 @@ import {
 import well_drilling from "../assets/well-drilling.jpg";
 import well_services_repair from "../assets/well-services-repair.jpg";
 import "typeface-inter";
-import "unfetch/polyfill";
+import "isomorphic-unfetch";
 
 export default () => (
   <>
