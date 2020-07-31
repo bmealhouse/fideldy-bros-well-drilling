@@ -1,9 +1,10 @@
 const title = "Fideldy Bros Well Drilling";
-const description = "Well drilling, well services & repair, and geothermal";
+const description =
+  "Professional well drilling since 1958. Well services & repair, inspections & water testing, vertical geothermal installs, and more.";
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://fideldy-bros-well-drilling.bmealhouse.now.sh",
+    siteUrl: "https://fideldywelldrilling.com",
     title,
     titleAlt: title,
     description,
@@ -37,6 +38,13 @@ module.exports = {
         display: "standalone",
       },
       /* eslint-enable camelcase */
+    },
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
     },
     // Must be placed at the end
     "gatsby-plugin-offline",

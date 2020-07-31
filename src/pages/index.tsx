@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import { Stack, Text } from "@chakra-ui/core";
 import well_drilling from "../assets/well-drilling.jpg";
 import well_services from "../assets/well-services.jpg";
@@ -14,6 +15,13 @@ import "isomorphic-unfetch";
 
 export default () => (
   <>
+    <Helmet>
+      <title>Fideldy Bros Well Drilling</title>
+      <meta
+        name="description"
+        content="Professional well drilling since 1958. Well services & repair, inspections & water testing, vertical geothermal installs, and more."
+      />
+    </Helmet>
     <Header />
     <Slogan />
     <Stack as="main" spacing={20}>
