@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/core";
+import Img from "gatsby-image/withIEPolyfill";
+import { Box, Button, Flex, Heading } from "@chakra-ui/core";
 
 export default ({
   position,
@@ -23,21 +24,28 @@ export default ({
           borderColor="#333"
           borderTopWidth={{ base: 7, sm: 0 }}
         >
-          <Image
-            src={image}
-            alt={`${heading} photo`}
-            size={{ base: 325, md: 400 }}
-            minWidth="100%"
+          <Img
+            fluid={image}
             objectFit="cover"
+            objectPosition="50% 50%"
+            alt={`${heading} photo`}
+            style={{
+              height:
+                typeof window === "undefined" || // server-side render
+                window.matchMedia("(min-width: 48em)").matches // md breakpoint
+                  ? 400
+                  : 300,
+              minWidth: "100%",
+            }}
           />
         </Box>
         <Box flex="0 0 50%" px={8} py={6} borderColor="#333" borderTopWidth={7}>
           <Heading as="h2" size="xl" fontWeight={700} letterSpacing="tighter">
             {heading}
           </Heading>
-          <Text mt={2} mb={4} letterSpacing="tight">
+          <Box mt={2} mb={4} letterSpacing="tight">
             {description}
-          </Text>
+          </Box>
           <Button
             as="a"
             // @ts-ignore "href" is not recognized as a valid prop when using the <Button as="a" /> component

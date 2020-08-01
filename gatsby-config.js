@@ -1,3 +1,6 @@
+/* eslint-disable camelcase */
+const path = require("path");
+
 const title = "Fideldy Bros Well Drilling";
 const description =
   "Professional well drilling since 1958. Well services & repair, inspections & water testing, vertical geothermal installs, and more.";
@@ -17,16 +20,19 @@ module.exports = {
     // facebook: 'facebook-site-name',
   },
   plugins: [
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
     {
-      resolve: "gatsby-plugin-chakra-ui",
+      resolve: "gatsby-source-filesystem",
       options: {
-        isUsingColorMode: false,
+        name: "images",
+        path: path.join(__dirname, "src", "images"),
       },
     },
-    "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      /* eslint-disable camelcase */
       resolve: "gatsby-plugin-manifest",
       options: {
         name: title,
@@ -37,13 +43,17 @@ module.exports = {
         theme_color: "#3182ce",
         display: "standalone",
       },
-      /* eslint-enable camelcase */
     },
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-chakra-ui",
+      options: {
+        isUsingColorMode: false,
       },
     },
     // Must be placed at the end

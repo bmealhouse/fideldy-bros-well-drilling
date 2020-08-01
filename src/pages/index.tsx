@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
+import { graphql } from "gatsby";
 import { Stack, Text } from "@chakra-ui/core";
-import well_drilling from "../assets/well-drilling.jpg";
-import well_services from "../assets/well-services.jpg";
 import {
   ContactUs,
   Footer,
@@ -13,21 +12,18 @@ import {
 import "typeface-inter";
 import "isomorphic-unfetch";
 
-export default () => (
+export default ({ data }) => (
   <>
     <Helmet>
-      <title>Fideldy Bros Well Drilling</title>
-      <meta
-        name="description"
-        content="Professional well drilling since 1958. Well services & repair, inspections & water testing, vertical geothermal installs, and more."
-      />
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
     <Header />
     <Slogan />
     <Stack as="main" spacing={20}>
       <HorizontalCTA
         position="left"
-        image={well_drilling}
+        image={data.wellDrillingImage.childImageSharp.fluid}
         heading="Well drilling"
         description={
           <>
@@ -43,7 +39,7 @@ export default () => (
       />
       <HorizontalCTA
         position="right"
-        image={well_services}
+        image={data.wellServicesImage.childImageSharp.fluid}
         heading="Well services"
         description={
           <>
@@ -64,3 +60,28 @@ export default () => (
     <Footer />
   </>
 );
+
+export const query = graphql`
+  query PageQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    wellDrillingImage: file(relativePath: { eq: "well-drilling.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    wellServicesImage: file(relativePath: { eq: "well-services.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
