@@ -20,6 +20,12 @@ module.exports = {
     // facebook: 'facebook-site-name',
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-8HPWRXJNCD"],
+      },
+    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
