@@ -7,6 +7,9 @@
   "author": "Brent Mealhouse <bmealhouse@gmail.com>",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": ">=16.x"
+  },
   "dependencies": {
     "@chakra-ui/core": "0.8.0",
     "@emotion/core": "10.0.28",
