@@ -59,7 +59,7 @@ export default async (request: NowRequest, response: NowResponse) => {
         email === "bmealhouse@gmail.com"
           ? email
           : "troy@fideldywelldrilling.com",
-      from: `Fideldy Bros Well Drilling <noreply@bmealhouse.dev>`,
+      from: `${name} <noreply@bmealhouse.dev>`,
       replyTo: `${name} <${email}>`,
       subject: "Message from https://www.fideldywelldrilling.com",
       text: `
